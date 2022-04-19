@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
-
 # In[1]:
-
-
-#Question 1
+# Q no 1
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -17,14 +14,9 @@ labels_metadata = {'malignant':2,'non-nodule':0,'benign':1}
 df['state'] = df['state'].map(labels_metadata)
 df.head()
 df['diagnosis'].unique()
-
 df['diagnosis'].plot(kind='hist')
 
-
-# In[2]:
-
-
-#Question 2
+#  Q no 2
 diagnosis_data = df["diagnosis"]
 state_data = df["state"]
 colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#8c564b"]
@@ -34,16 +26,8 @@ autopct='%1.1f%%', shadow=True, startangle=140)
 plt.title("Total number of patients of each disease with respect to the disease state malignant or benign")
 plot in a pie chart.")
 plt.show()
-          
 
-
-          
-
-
-# In[ ]:
-
-
-#Question 3
+# Q no 3
 
 diagnosis_data = df["diagnosis"]
 gender_data = df["gender"]
@@ -54,5 +38,3 @@ autopct='%1.1f%%', shadow=True, startangle=140)
 plt.title(" Total number of patients of each diagnosis with respect to the gender Female Male")
 plot in a pie chart.")
 plt.show()
- 
-
